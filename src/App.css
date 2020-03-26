@@ -1,0 +1,49 @@
+#root, body, .app {
+  margin: 0;
+  padding: 0;
+}
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  background:  url('img/sunset.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.card {
+  width: 60%;
+  height: auto;
+  background-color: #eee;
+  border-radius: 25px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, .2);
+  padding: 2%;
+}
+.advice {
+  font-family: 'Gotu', sans-serif;
+  font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.adviceButton {
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: transparent;
+  border: 1px solid #f07c4b;
+  color: #f07c4b;
+  transition: all .3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  outline: none;
+}
+.adviceButton:hover {
+  background-color: #fddac6;
+ cursor: pointer;
+}
