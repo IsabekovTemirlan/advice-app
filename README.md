@@ -1,3 +1,1 @@
-axios
-react
-preview - https://advice-app-6ebf9.web.app/
+Preview - https://advice-app-6ebf9.web.app/
