@@ -9,7 +9,7 @@
   align-items: center;
   text-align: center;
   box-sizing: border-box;
-  background:  url('img/sunset.jpg');
+  background:  url('./img/sunset.jpg');
   background-size: cover;
   background-position: center;
 }

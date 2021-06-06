@@ -1,15 +1,20 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect} from 'react'
 import ReactDom from 'react-dom'
+import { Card } from "./Card";
 
 import axios from 'axios'
 import './style.css'
 
+type adviceT = {
+  advice: string
+}
+
 function App() {
-  const [state, setState] = useState({ advice: '' })
+  const [state, setState] = useState<adviceT>({ advice: '' })
 
   useEffect(() => fetchAdvice(), [])
 
-  function fetchAdvice() {
+  function fetchAdvice(): void {
     axios.get('https://api.adviceslip.com/advice')
       .then((response) => {
         const { advice } = response.data.slip
@@ -22,12 +27,7 @@ function App() {
 
   return (
     <div className="app">
-      <div className="card">
-        <div className="advice">
-          {state.advice}
-        </div>
-        <button className="adviceButton" onClick={fetchAdvice} >Give me advice</button>
-      </div>
+      <Card advice={state.advice} fetchAdvice={fetchAdvice} />
     </div>
   )
 }
